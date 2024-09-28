@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bike Maintenance Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bike Maintenance Tracker</h1>
+        <div class="row">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Maintenance Form -->
+                <h2>Add Maintenance Task</h2>
+                <form id="maintenance-form">
+                    <input type="text" id="task" placeholder="Maintenance Task" required>
+                    <input type="date" id="date" required>
+                    <input type="number" id="interval" placeholder="Interval (days)" required>
+                    <input type="number" id="cost" placeholder="Cost ($)" required>
+                    <textarea id="notes" placeholder="Notes"></textarea>
+                    <button type="submit">Add Maintenance</button>
+                </form>
+
+                <!-- Parts Inventory Form -->
+                <h2>Add Bike Part</h2>
+                <form id="part-form">
+                    <input type="text" id="part-name" placeholder="Part Name" required>
+                    <input type="text" id="condition" placeholder="Condition" required>
+                    <input type="date" id="replacement-date" required>
+                    <button type="submit">Add Part</button>
+                </form>
+
+                <!-- Maintenance History -->
+                <h2>Maintenance History</h2>
+                <ul id="maintenance-list"></ul>
+
+                <!-- Parts Inventory -->
+                <h2>Parts Inventory</h2>
+                <ul id="parts-list"></ul>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Dashboard -->
+                <h2>Dashboard</h2>
+                <div id="dashboard">
+                    <p>Total Maintenance Tasks: <span id="total-tasks">0</span></p>
+                    <p>Total Costs: $<span id="total-costs">0.00</span></p>
+                    <p>Upcoming Tasks: <span id="upcoming-tasks">0</span></p>
+                    <p>Last Maintenance Date: <span id="last-maintenance">N/A</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
